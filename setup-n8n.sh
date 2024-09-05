@@ -5,7 +5,7 @@
 if ! command -v npm &> /dev/null
 then
     echo "npm not found, installing npm..."
-    sudo apt install -y npm
+    sudo apt install npm
 else
     echo "npm is already installed."
 fi
