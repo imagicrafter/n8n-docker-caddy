@@ -7,7 +7,6 @@ cd n8n-docker-caddy
 if ! command -v npm &> /dev/null
 then
     echo "npm not found, installing npm..."
-    sudo apt update
     sudo apt install -y npm
 else
     echo "npm is already installed."
