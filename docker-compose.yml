@@ -20,10 +20,10 @@ services:
     environment:
       - DB_TYPE=postgresdb
       - DB_TABLE_PREFIX=n8n_
-      - DB_POSTGRESDB_DATABASE=postgres
-      - DB_POSTGRESDB_HOST=aws-0-us-west-1.pooler.supabase.com
-      - DB_POSTGRESDB_PORT=6543
-      - DB_POSTGRESDB_USER=postgres.USERNAME
+      - DB_POSTGRESDB_DATABASE=n8n_db
+      - DB_POSTGRESDB_HOST=DROPLETIP
+      - DB_POSTGRESDB_PORT=5432
+      - DB_POSTGRESDB_USER=n8n_user
       - DB_POSTGRESDB_PASSWORD=PASSWORD
       - DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED=false
       - N8N_HOST=${SUBDOMAIN}.${DOMAIN_NAME}
