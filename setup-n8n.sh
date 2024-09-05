@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Step 2: Navigate to the project directory
-cd n8n-docker-caddy
 
 # Step 3: Install npm if not already installed
 if ! command -v npm &> /dev/null
