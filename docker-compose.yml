@@ -37,9 +37,11 @@ services:
     volumes:
       - n8n_data:/home/node/.n8n
       - ${DATA_FOLDER}/local_files:/files
+      - npm_data:/usr/local/lib/node_modules  # Persist npm global packages
       
 volumes:
   caddy_data:
     external: true
   n8n_data:
     external: true
+  npm_data:
