@@ -21,7 +21,7 @@ services:
       - DB_TYPE=postgresdb
       - DB_TABLE_PREFIX=n8n_
       - DB_POSTGRESDB_DATABASE=n8n_db
-      - DB_POSTGRESDB_HOST=DROPLETIP
+      - DB_POSTGRESDB_HOST=${YOUR_DROPLET_IP}
       - DB_POSTGRESDB_PORT=5432
       - DB_POSTGRESDB_USER=n8n_user
       - DB_POSTGRESDB_PASSWORD=password
