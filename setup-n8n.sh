@@ -13,6 +13,9 @@ else
     echo "npm is already installed."
 fi
 
+# Step 2: Prompt for PostgreSQL Password
+read -sp "Enter a custom password for the PostgreSQL user 'n8n_user': " pg_password
+echo  # Move to a new line after input
 
 # Step 3: Install PostgreSQL if not already installed
 if ! command -v psql &> /dev/null
@@ -27,7 +30,7 @@ fi
 
 # Step 4: Configure PostgreSQL
 echo "Configuring PostgreSQL..."
-sudo -i -u postgres psql -c "CREATE USER n8n_user WITH PASSWORD 'password';"
+sudo -i -u postgres psql -c "CREATE USER n8n_user WITH PASSWORD '$pg_password';"
 sudo -i -u postgres createdb n8n_db
 sudo -i -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE n8n_db TO n8n_user;"
 sudo sed -i "s/#listen_addresses = 'localhost'/listen_addresses = '*'/g" /etc/postgresql/14/main/postgresql.conf
