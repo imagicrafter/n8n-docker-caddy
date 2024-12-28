@@ -43,6 +43,7 @@ sudo systemctl restart postgresql
 echo "Creating Docker volumes for caddy_data and n8n_data..."
 sudo docker volume create caddy_data
 sudo docker volume create n8n_data
+sudo docker volume create npm_data
 
 # Step 6: Allow ports 80, 443, and 5432 for PostgreSQL
 echo "Allowing traffic on ports 80, 443, and 5432..."
