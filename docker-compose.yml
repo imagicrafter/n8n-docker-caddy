@@ -46,3 +46,4 @@ volumes:
   n8n_data:
     external: true
   npm_data:
+    external: true
