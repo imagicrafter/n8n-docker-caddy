@@ -18,6 +18,7 @@ services:
     ports:
       - 5678:5678
     environment:
+      - N8N_ENCRYPTION_KEY=9De1FECwUbY2e1wCXHubpTQ
       - DB_TYPE=postgresdb
       - DB_TABLE_PREFIX=n8n_
       - DB_POSTGRESDB_DATABASE=n8n_db
