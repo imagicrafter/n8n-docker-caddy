@@ -35,7 +35,8 @@ services:
       - GENERIC_TIMEZONE=${GENERIC_TIMEZONE}
       - NODE_FUNCTION_ALLOW_EXTERNAL=*
       - NODE_FUNCTION_ALLOW_BUILTIN=*
-      - EXECUTIONS_DATA_MAX_AGE=720
+      - EXECUTIONS_DATA_MAX_AGE=240
+      - EXECUTIONS_DATA_PRUNE_MAX_COUNT=25000
     volumes:
       - n8n_data:/home/node/.n8n
       - ${DATA_FOLDER}/local_files:/files
